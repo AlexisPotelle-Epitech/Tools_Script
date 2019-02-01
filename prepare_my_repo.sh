@@ -1,7 +1,7 @@
 #!/bin/bash
 name_of_dir=$1
-user_login="alexis.potelle@epitech.eu"
-token="73be7f59d265bf5a3ad072d1e52ad3fbf4c4ce83938e1d455efe1fec53bee770effe177dbfa479821059fff13f38dbbd35fb213b5576533ca47f6b94b1973ceb"
+user_login=
+token=
 
 
 create_repo() {
