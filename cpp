@@ -1,6 +1,5 @@
-
-
 #!/bin/bash
+
 YEAR=`date +"%Y"`
 
 if [ -z $1 ]; then
@@ -15,8 +14,8 @@ while [ $# > 1 ]; do
     echo "** EPITECH PROJECT, $YEAR" >> $1.cpp
     echo "** $PWD" >> $1.cpp
     echo "** File description:" >> $1.cpp
-    echo "** IComponent" >> $1.cpp
-    echo "/*" >> $1.cpp
+    echo "** $1.cpp" >> $1.cpp
+    echo "*/" >> $1.cpp
     echo "" >> $1.cpp
     echo "#include \"$1.hpp\" " >> $1.cpp
     touch $1.hpp
@@ -24,8 +23,8 @@ while [ $# > 1 ]; do
     echo "** EPITECH PROJECT, $YEAR" >> $1.hpp
     echo "** $PWD" >> $1.hpp
     echo "** File description:" >> $1.hpp
-    echo "** IComponent" >> $1.hpp
-    echo "/*" >> $1.hpp
+    echo "** $1.hpp" >> $1.hpp
+    echo "*/" >> $1.hpp
     echo "" >> $1.hpp
     echo "#include <iostream>" >> $1.hpp
     echo "#include <string>" >> $1.hpp
@@ -37,9 +36,10 @@ while [ $# > 1 ]; do
     echo "    /* data */" >> $1.hpp
     echo "" >> $1.hpp
     echo "public:" >> $1.hpp
-    echo "    name_t ();" >> $1.hpp
+    echo "    $1 ();" >> $1.hpp
     echo "    virtual ~$1 ();" >> $1.hpp
     echo "};" >> $1.hpp
+    rm -f 1
     shift
     if [ -z $2 ]; then
         touch $1.cpp
@@ -47,8 +47,8 @@ while [ $# > 1 ]; do
         echo "** EPITECH PROJECT, $YEAR" >> $1.cpp
         echo "** $PWD" >> $1.cpp
         echo "** File description:" >> $1.cpp
-        echo "** IComponent" >> $1.cpp
-        echo "/*" >> $1.cpp
+        echo "** $1.cpp" >> $1.cpp
+        echo "*/" >> $1.cpp
         echo "" >> $1.cpp
         echo "#include \"$1.hpp\" " >> $1.cpp
         touch $1.hpp
@@ -56,8 +56,8 @@ while [ $# > 1 ]; do
         echo "** EPITECH PROJECT, $YEAR" >> $1.hpp
         echo "** $PWD" >> $1.hpp
         echo "** File description:" >> $1.hpp
-        echo "** IComponent" >> $1.hpp
-        echo "/*" >> $1.hpp
+        echo "** $1.hpp" >> $1.hpp
+        echo "*/" >> $1.hpp
         echo "" >> $1.hpp
         echo "#include <iostream>" >> $1.hpp
         echo "#include <string>" >> $1.hpp
@@ -69,9 +69,10 @@ while [ $# > 1 ]; do
         echo "    /* data */" >> $1.hpp
         echo "" >> $1.hpp
         echo "public:" >> $1.hpp
-        echo "    name_t ();" >> $1.hpp
+        echo "    $1 ();" >> $1.hpp
         echo "    virtual ~$1 ();" >> $1.hpp
         echo "};" >> $1.hpp
+        rm -f 1
         exit 0
     fi
 done
